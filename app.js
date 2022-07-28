@@ -1,8 +1,29 @@
-// import functions and grab DOM elements
+import { furniture } from './array-one.js';
+import { dogs } from './array-two.js';
+import { books } from './array-three.js';
+import { renderFurnitureItem } from './render-furniture-item.js';
+import { renderDog } from './render-dog.js';
+import { renderBook } from './render-book.js';
 
-// initialize global state
+const booksListEl = document.getElementById('books-list');
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+for (let book of books) {
+    const bookEl = renderBook(book);
+    booksListEl.append(bookEl);
+}
+
+const dogListEl = document.getElementById('dogs-list');
+
+for (let aParticularDog of dogs) {
+    const dogEl = renderDog(aParticularDog);
+
+    dogListEl.append(dogEl);
+}
+
+const furnitureListEl = document.getElementById('furniture-list');
+
+for (let item of furniture) {
+    const furnitureEl = renderFurnitureItem(item);
+
+    furnitureListEl.append(furnitureEl);
+}

@@ -30,20 +30,6 @@ main {
     margin-bottom: calc(var(--footer-height));
 }
 
-section {
-    background-color: var(--color5);
-    width: 1000px;
-    max-width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
-}
 
 header {
     display: flex;
@@ -110,4 +96,46 @@ footer {
         transform: rotate3d(10, 10, 10, 50deg) scale(1);
     }
 
+  }
+
+  #furniture-list, #dogs-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .furniture-item {
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.39);
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .dog {
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.39);
+    padding: 5px;
+    border-radius: 5px;
+    margin: 15px;
+  }
+
+  .dog h3, .dog p {
+    text-align: center;
+    margin: 2px;
+  }
+
+  .book {
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.39);
+    text-align: center;
+    display: grid;
+    grid-template-rows: .5fr 1fr;
+    margin: 15px;
+    height: 400px;
+    width: 700px;
+  }
+
+  .book .bottom {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+  }
+
+  .book img {
+    width: 200px;
   }
